@@ -1,0 +1,250 @@
+#header {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: rgb(255, 255, 255);
+  z-index: 99;
+  position: fixed;
+  /* siempre ponérselo al container general del todo*/
+
+  .header-topbar {
+    width: 100%;
+    height: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em;
+    box-sizing: border-box;
+    position: relative;
+    /*siempre ponérselo al container general*/
+
+    .nav {
+      display: flex;
+      justify-content: end;
+      width: 100%;
+
+      .menu-points {
+        display: none;
+      }
+
+      .menu-icon {
+        cursor: pointer;
+      }
+
+      .menu {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(255, 255, 255);
+        width: 100%;
+        padding: 1.25em 0;
+        position: absolute;
+        top: 2.5em;
+        right: 0;
+        gap: 0.5em;
+
+        li {
+          border-bottom: 1px solid #bebebe4b;
+        }
+      }
+
+      .menu-points:checked + .menu-icon + .menu {
+        display: flex;
+      }
+    }
+  }
+}
+
+/* -----MAIN---- */
+
+#main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 4.2em;
+
+  .hero {
+    height: 70vh;
+    width: 90%;
+    padding-top: 3.5em;
+    padding-bottom: 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 1.9rem;
+    /* box-sizing: border-box; */
+
+    .hero-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: "Epilogue", sans-serif;
+
+      h3 {
+        font-size: 1.25em;
+        padding-bottom: 1.25em;
+      }
+
+      h1 {
+        text-align: center;
+        font-size: 3em;
+        line-height: 1;
+      }
+
+      .text-phone {
+        text-align: center;
+        padding-top: 1.25em;
+        font-size: 1.1em;
+      }
+
+      .text-big {
+        display: none;
+      }
+    }
+  }
+
+  /* --------BRANDS--------- */
+
+  .brands {
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .brands-container {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 3.1em 0;
+      gap: 2.5em;
+      border-top: 2px solid #bebebe;
+      border-bottom: 2px solid #bebebe;
+
+      div img {
+        width: 100%;
+        height: 2em;
+        display: block;
+        object-fit: cover;
+      }
+    }
+
+    .brands-container-big {
+      display: none;
+
+      div img {
+        width: 100%;
+        height: 2em;
+        display: block;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  /* --HAY QUE MANTENER SIEMPRE LA MISMA ESTRUCTIRA-- */
+
+  #header {
+    .header-topbar {
+      width: 90%;
+
+      display: flex;
+      justify-content: space-between;
+      padding: 0 2em;
+
+      .nav {
+        .menu-icon {
+          display: none;
+        }
+
+        .menu {
+          width: 20%;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          position: static;
+          gap: 30px;
+        }
+      }
+    }
+  }
+
+  /* ------MAIN----- */
+
+  #main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .hero {
+      width: 90%;
+      height: 70vh;
+      padding-top: 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 0;
+
+      .hero-text {
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+
+        h3 {
+          font-size: 1.1em;
+          padding-bottom: 1.7em;
+        }
+
+        h1 {
+          text-align: start;
+          font-size: 3.5em;
+        }
+
+        .text-phone {
+          display: none;
+        }
+
+        .text-big {
+          display: flex;
+          position: static;
+          padding-top: 1.7em;
+          font-size: 1.1em;
+        }
+      }
+    }
+
+    /* ------------BRANDS------------ */
+
+    .brands {
+      width: 100%;
+
+      .brands-container {
+        display: none;
+      }
+
+      .brands-container-big {
+        width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 3.1em 0;
+        gap: 2.5em;
+        border-top: 2px solid #bebebe;
+        border-bottom: 2px solid #bebebe;
+      }
+    }
+  }
+}

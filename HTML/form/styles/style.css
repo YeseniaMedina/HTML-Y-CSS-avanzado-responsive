@@ -1,0 +1,22 @@
+ body{
+  margin-left: 10px;
+ }
+ 
+ table{
+  width: 60%;
+  border-collapse: collapse;
+  
+ }
+ 
+ table, thead, th, td{
+        border: 1px solid black;
+        text-align: center;
+        
+        
+  }
+
+  thead{
+      background-color: rgb(214, 214, 212);
+  }
+
+  

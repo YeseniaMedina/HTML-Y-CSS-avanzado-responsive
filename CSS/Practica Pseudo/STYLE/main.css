@@ -1,0 +1,54 @@
+/* 1- Selecciona el input de texto (type="text") y cambia su borde cuando está enfocado. */
+input[type="text"]:focus {
+    border: 2px solid rgb(136, 82, 180);
+    outline: none;  
+}
+
+/* 2- Aplica un estilo verde al label que contiene un checkbox marcado. */
+
+label:has(input[type="checkbox"]:checked) {
+    color: green;
+}
+
+/* 3- Añade un emoji ⭐️ antes de cada <p> dentro de .noticias. */
+
+.noticias p:not(:first-child)::before {
+    content:"⭐";
+}
+
+
+/* 4- Aplica un subrayado a los botones cuando el ratón pasa por encima. */
+
+button:hover{
+    text-decoration: underline;
+    text-decoration-color: rgb(20, 72, 216) ;
+}
+
+/* 5- Haz que la primera letra del primer párrafo de .noticias sea roja y más grande. */
+
+.noticias p:first-child::first-letter{
+    color:   rgb(180, 34, 34);
+    font-size: 30px;
+}
+
+/* 6- Aplica un fondo gris al último párrafo de .noticias. */
+
+.noticias p:last-child{
+    background-color: rgb(202, 197, 197);
+}
+
+/* 7- Estiliza el botón de forma distinta si está siendo pulsado. */
+
+button:active{
+    background-color: rgb(58, 95, 95);
+    transform: scale(0.98);
+    color: white;
+    border-color: rgb(38, 47, 51);
+}
+
+/* 8- Añade un contenido ficticio después del <h2 class="titulo">. */
+
+.titulo::after{
+    content:"📝";
+}
+
